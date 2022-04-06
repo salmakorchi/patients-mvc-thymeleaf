@@ -1,6 +1,6 @@
-                                                                        COMPTE RENDU
+                                                   COMPTE RENDU
 
-                                                               Spring MVC ,Thymeleaf ,Spring DATA
+                                         Spring MVC ,Thymeleaf ,Spring DATA
                                                                
    INTRODUCTION
    
