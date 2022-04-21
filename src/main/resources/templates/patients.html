@@ -14,7 +14,15 @@
 
         </div>
         <div class="card-body">
+            <form th:action="@{index}" method="get">
 
+                <label for="keyword"> Key word</label>
+                <input  id="keyword" type="text" name="keyword">
+                <button type="submit" class="btn btn-primary"> Chercher </button>
+
+
+
+            </form>
             <table class="table">
                 <thead>
                 <tr>
