@@ -21,12 +21,17 @@ public class PatientController {
     private PatientRepository patientRepository;
     @GetMapping(path="/index")
     //if i go to http://localhost:8082/index this view will be triggered
-    public String patients(Model model, @RequestParam(name="page",defaultValue = "0") int page , @RequestParam(name="size",defaultValue = "5") int size){
-        // to return values to the view
-        Page<Patient> Pagepatients = patientRepository.findAll(PageRequest.of(page, size));
+    public String patients(Model model,
+                           @RequestParam(name="page",defaultValue = "0") int page ,
+                           @RequestParam(name="size",defaultValue = "5") int size,
+                           @RequestParam(name="keyword",defaultValue = "") String keyword
+                           ){
+        // to return  values to the view
+        Page<Patient> Pagepatients = patientRepository.findByNomContains(keyword,PageRequest .of(page, size));
         model.addAttribute("listPatients",Pagepatients.getContent());
         model.addAttribute("pages",new int[Pagepatients.getTotalPages()]);
         model.addAttribute("currentPage",page);
+        model.addAttribute("keyword",keyword);
         return "patients";
     }
 
