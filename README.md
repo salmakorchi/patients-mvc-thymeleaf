@@ -1,6 +1,6 @@
-                                                   COMPTE RENDU
+                                          COMPTE RENDU
 
-                                         Spring MVC ,Thymeleaf ,Spring DATA
+                             Spring MVC ,Thymeleaf ,Spring DATA Part 2
                                                                
    INTRODUCTION
    
@@ -30,10 +30,10 @@
 
   CAPTURES D'ECRAN 
       
-          A-affichage des informations sur la console
+          A-Ajout du template a la page des patients
         
         
-   ![image](https://user-images.githubusercontent.com/57690392/162084178-2c1b5fb2-78d6-41c4-812a-e8ef1d27eaa4.png)
+  ![image](https://user-images.githubusercontent.com/57690392/165602061-c12578d9-f59a-43a5-bf87-733139554aef.png)
             
             
           B-connexion a la base H2
