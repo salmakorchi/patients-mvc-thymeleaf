@@ -120,6 +120,16 @@
  ![image](https://user-images.githubusercontent.com/57690392/162085163-6ae1e631-ced1-4404-8d21-748a3ed19f7f.png)
 
 
+          F-search
+![image](https://user-images.githubusercontent.com/57690392/165594027-f8f09acb-c58e-4fef-b938-b3152f653276.png)
+         
+         
+         G-Delete
+![image](https://user-images.githubusercontent.com/57690392/165594231-8b75559f-9208-4cc2-931d-ca4553f2cc3d.png)
+![image](https://user-images.githubusercontent.com/57690392/165594284-ef56c4ae-995f-4c42-8b19-33622111f17f.png)
+
+
+
 
 
 
