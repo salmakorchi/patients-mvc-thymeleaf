@@ -16,8 +16,8 @@
         <div class="card-body">
             <form th:action="@{index}" method="get">
 
-                <label for="keyword" th:value="${keyword}"> Keyword</label>
-                <input  id="keyword" type="text" name="keyword">
+                <label for="keyword" >Keyword</label>
+                <input  id="keyword" type="text" name="keyword" th:value="${keyword}" >
                 <button type="submit" class="btn btn-primary"> Chercher </button>
 
 
@@ -40,6 +40,10 @@
                     <td th:text="${p.getDateNaissance()}"></td>
                     <td th:text="${p.isMalade()}"></td>
                     <td th:text="${p.getScore()}"></td>
+                    <!-- @{delete}  takes us to an action called delete and passes the id in url-->
+                    <td>
+                        <a onclick="return confirm('u sure you wanna remove this patient ?')" class="btn btn-danger" th:href="@{delete(id=${p.getId()},keyword=${keyword},page=${currentPage})}"> Delete </a>
+                    </td>
                 </tr>
                 </tbody>
             </table>

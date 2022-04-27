@@ -21,6 +21,7 @@ public class PatientController {
     private PatientRepository patientRepository;
     @GetMapping(path="/index")
     //if i go to http://localhost:8082/index this view will be triggered
+
     public String patients(Model model,
                            @RequestParam(name="page",defaultValue = "0") int page ,
                            @RequestParam(name="size",defaultValue = "5") int size,
@@ -33,6 +34,25 @@ public class PatientController {
         model.addAttribute("currentPage",page);
         model.addAttribute("keyword",keyword);
         return "patients";
+    }
+    //get mapping is not good for security
+        //  getmapping is where we define which method we
+        // use for the /map on url
+
+    @GetMapping("/delete")
+    //this will delete a patient by id
+    public String delete(Long id,String keyword,int page){
+        patientRepository.deleteById(id);
+        //then redirecting to index
+        return "redirect:/index?page="+page+"&keyword="+keyword;
+
+    }
+    @GetMapping("/")
+    public String home(){
+
+        //then refreshing the page
+        return "redirect:/index";
+
     }
 
 }
