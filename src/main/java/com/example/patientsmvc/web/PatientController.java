@@ -9,7 +9,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -53,6 +55,28 @@ public class PatientController {
         //then refreshing the page
         return "redirect:/index";
 
+    }
+
+    //returns patient list as a json file
+    @GetMapping("/patients")
+    @ResponseBody
+    public List<Patient> listPatients(){
+        return patientRepository.findAll();
+    }
+
+    @GetMapping("/formPatients")
+    public String formPatient(Model model){
+        model.addAttribute("patient",new Patient());
+        return "formPatients";
+    }
+
+    @PostMapping(path = "/save")
+    public String save(Model model,Patient patient){
+      //to save patient in database we use
+        patientRepository.save(patient);
+
+
+        return "formPatients";
     }
 
 }

@@ -3,6 +3,7 @@ package com.example.patientsmvc.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 import javax.persistence.*;
@@ -19,6 +20,7 @@ public class Patient {
     private Long id;
     private String nom;
     @Temporal(TemporalType.DATE) // to get date in date format instead of timestamp
+    @DateTimeFormat(pattern = "yyyy-MM-dd")  // in case the date format of the inserted causes a problem
     private Date dateNaissance;
     private boolean malade;
     private int score;

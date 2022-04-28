@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--to add this to The master page TEMPLATE.HTML-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template"
+>
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Form Patients</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/webjars/">
+
+</head>
+<body>
+<!--the content of the fragment-->
+<div layout:fragment="content1">
+
+    <!--
+
+    <div class="col-md-6 offset-3">
+        <form th:action="@{save}" method="post">
+            <div class="">
+                <label for="nom"> Nom</label>
+                <input class="form-control" type="text" id="nom" th:value="${patient.nom}" name="nom"/>
+                <span th:errors="${patient.nom}"></span>
+            </div>
+            <div class="">
+                <label for="dateNaissance"> Date de naissance</label>
+                <input class="form-control" type="date" id="dateNaissance" th:value="${patient.dateNaissance}" name="dateNaissance"/>
+                <span th:errors="${patient.dateNaissance}"></span>
+            </div>
+            <div class="">
+                <label for="malade"> Malade</label>
+                <input  type="checkbox" id="malade" th:checked="${patient.malade}" name="malade"/>
+                <span th:errors="${patient.malade}"></span>
+            </div>
+
+            <div class="">
+                <label for="score"> Score</label>
+                <input class="form-control" type="text" id="score" th:value="${patient.score}" name="score"/>
+                <span th:errors="${patient.score}"></span>
+            </div>
+            <button type="submit" class="btn btn-primary"> Save </button>
+        </form>
+    </div>
+
+    -->
+    <form th:action="@{save}" method="post">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div class="card border-0 shadow rounded-3 my-5">
+                        <div class="card-body p-4 p-sm-5">
+                            <h5 class="card-title text-center mb-5 fw-light fs-5">Nouveau Patient </h5>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput"  th:value="${patient.nom}" placeholder="Nom" name="nom">
+                                <label for="floatingInput">Nom</label>
+                                <span th:errors="${patient.nom}"></span>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="date" class="form-control" id="floatingDate"  th:value="${patient.dateNaissance}" name="dateNaissance">
+                                <label for="floatingDate">Date de naissance</label>
+                                <span th:errors="${patient.dateNaissance}"></span>
+
+                            </div>
+
+
+
+
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" th:checked="${patient.malade}" type="checkbox"  id="malade" name="malade">
+                                <label class="form-check-label" for="malade">
+                                    Malade
+                                </label>
+                                <span th:errors="${patient.malade}"></span>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingScore"  th:value="${patient.score}" placeholder="" name="score">
+                                <label for="floatingScore">Score</label>
+                                <span th:errors="${patient.score}"></span>
+
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Save
+                                </button>
+                            </div>
+                            <hr class="my-4">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+</body>
+<style>
+
+
+    body {
+        background: #007bff;
+        background: linear-gradient(to right, #0062E6, #33AEFF);
+    }
+
+    .btn-login {
+        font-size: 0.9rem;
+        letter-spacing: 0.05rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .btn-google {
+        color: white !important;
+        background-color: #ea4335;
+    }
+
+    .btn-facebook {
+        color: white !important;
+        background-color: #3b5998;
+    }
+</style>
+</html>
