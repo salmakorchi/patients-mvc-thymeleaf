@@ -167,9 +167,9 @@
                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Send" >
                                         <i class="zmdi zmdi-mail-send"></i>
                                     </button>
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <a class="item" data-toggle="tooltip" data-placement="top" th:href="@{editPatient(id=${p.getId()},keyword=${keyword},page=${currentPage})}" title="Edit">
                                         <i class="zmdi zmdi-edit"></i>
-                                    </button>
+                                    </a>
                                     <a class="item" data-toggle="tooltip" data-placement="top" title="Delete"
                                             onclick="return confirm('u sure you wanna remove this patient ?')"
                                             th:href="@{delete(id=${p.getId()},keyword=${keyword},page=${currentPage})}">
