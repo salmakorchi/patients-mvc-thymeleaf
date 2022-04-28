@@ -3,16 +3,19 @@ package com.example.patientsmvc.web;
 import com.example.patientsmvc.entities.Patient;
 import com.example.patientsmvc.repositories.PatientRepository;
 import lombok.AllArgsConstructor;
+import lombok.Value;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -71,7 +74,9 @@ public class PatientController {
     }
 
     @PostMapping(path = "/save")
-    public String save(Model model,Patient patient){
+    public String save(Model model, @Valid Patient patient, BindingResult bindingResult){
+        //binding results stores errors
+        if(bindingResult.hasErrors()) return  "formPatients";
       //to save patient in database we use
         patientRepository.save(patient);
 
