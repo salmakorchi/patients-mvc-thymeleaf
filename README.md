@@ -13,11 +13,8 @@
    
    
        comment peut on ?:
-           chercher des patients avec pagination
-           supprimer des patients
-           ajouter un patient avec validation de formulaire
-           editer et mettre a jour un patient
-           creer une page template basée sur thymeleaf layout
+           s'authentifier
+          
            
            
    CONCEPTION ET ARCHITECTURE 
@@ -30,16 +27,10 @@
 
   CAPTURES D'ECRAN 
       
-          A-Ajout du Layout
+          A-l'authentification par defaut
         
         
-  ![image](https://user-images.githubusercontent.com/57690392/165602061-c12578d9-f59a-43a5-bf87-733139554aef.png)
+![image](https://user-images.githubusercontent.com/57690392/165682691-9089584d-94c2-4965-828b-1a01e55b7a4a.png)
             
             
-          B-implementation d'ajout du nouveau patient
-![image](https://user-images.githubusercontent.com/57690392/165672422-6ab991cc-b7b1-47b5-aa41-c6934097fb84.png)
-
-
-          C-Spring boot validation
-![image](https://user-images.githubusercontent.com/57690392/165675425-126f4ec5-2905-4611-8faf-1f014c131e7b.png)
-
+         
