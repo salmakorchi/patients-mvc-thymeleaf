@@ -43,3 +43,11 @@
           C-Spring boot validation
 ![image](https://user-images.githubusercontent.com/57690392/165675425-126f4ec5-2905-4611-8faf-1f014c131e7b.png)
 
+          D-editer les informations du patient 
+![image](https://user-images.githubusercontent.com/57690392/165678236-fb9d7ad7-9afc-47a8-b1b2-c8a9b0230851.png)
+
+![image](https://user-images.githubusercontent.com/57690392/165678394-051ade8e-4695-4c65-964f-96e05ee7c8e9.png)
+
+          apres edition :
+![image](https://user-images.githubusercontent.com/57690392/165678439-ffbe15b8-552e-43a6-9f12-c9aae759872b.png)
+          
